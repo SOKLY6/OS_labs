@@ -1,0 +1,256 @@
+11190 execve("./parent", ["./parent"], 0xfffffbe59578 /* 61 vars */) = 0
+11190 brk(NULL)                         = 0xc4aeffdb3000
+11190 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xe15bffe68000
+11190 faccessat(AT_FDCWD, "/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+11190 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+11190 fstat(3, {st_mode=S_IFREG|0644, st_size=56447, ...}) = 0
+11190 mmap(NULL, 56447, PROT_READ, MAP_PRIVATE, 3, 0) = 0xe15bffe5a000
+11190 close(3)                          = 0
+11190 openat(AT_FDCWD, "/lib/aarch64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+11190 read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\360\206\2\0\0\0\0\0"..., 832) = 832
+11190 fstat(3, {st_mode=S_IFREG|0755, st_size=1722920, ...}) = 0
+11190 mmap(NULL, 1892240, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_DENYWRITE, -1, 0) = 0xe15bffc64000
+11190 mmap(0xe15bffc70000, 1826704, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0) = 0xe15bffc70000
+11190 munmap(0xe15bffc64000, 49152)     = 0
+11190 munmap(0xe15bffe2e000, 16272)     = 0
+11190 mprotect(0xe15bffe0a000, 77824, PROT_NONE) = 0
+11190 mmap(0xe15bffe1d000, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19d000) = 0xe15bffe1d000
+11190 mmap(0xe15bffe22000, 49040, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xe15bffe22000
+11190 close(3)                          = 0
+11190 set_tid_address(0xe15bffe68fb0)   = 11190
+11190 set_robust_list(0xe15bffe68fc0, 24) = 0
+11190 rseq(0xe15bffe69600, 0x20, 0, 0xd428bc00) = 0
+11190 mprotect(0xe15bffe1d000, 12288, PROT_READ) = 0
+11190 mprotect(0xc4aef106f000, 4096, PROT_READ) = 0
+11190 mprotect(0xe15bffe70000, 8192, PROT_READ) = 0
+11190 prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+11190 munmap(0xe15bffe5a000, 56447)     = 0
+11190 rt_sigaction(SIGPIPE, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_INTERRUPT|SA_NODEFER|SA_RESETHAND|0xffffffff00000000}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+11190 getrandom("\x57\x60\x17\x0e\xea\x87\x63\x63", 8, GRND_NONBLOCK) = 8
+11190 brk(NULL)                         = 0xc4aeffdb3000
+11190 brk(0xc4aeffdd4000)               = 0xc4aeffdd4000
+11190 fstat(0, {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0x1), ...}) = 0
+11190 read(0, "test_1\n", 1024)         = 7
+11190 read(0, "test_2\n", 1024)         = 7
+11190 pipe2([3, 4], 0)                  = 0
+11190 pipe2([5, 6], 0)                  = 0
+11190 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0xe15bffe68fb0) = 11216
+11216 set_robust_list(0xe15bffe68fc0, 24 <unfinished ...>
+11190 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
+11216 <... set_robust_list resumed>)    = 0
+11216 openat(AT_FDCWD, "test_1", O_WRONLY|O_CREAT|O_TRUNC, 0644 <unfinished ...>
+11217 set_robust_list(0xe15bffe68fc0, 24) = 0
+11190 <... clone resumed>, child_tidptr=0xe15bffe68fb0) = 11217
+11217 openat(AT_FDCWD, "test_2", O_WRONLY|O_CREAT|O_TRUNC, 0644 <unfinished ...>
+11216 <... openat resumed>)             = 7
+11190 close(3)                          = 0
+11190 close(5)                          = 0
+11190 read(0,  <unfinished ...>
+11217 <... openat resumed>)             = 7
+11217 dup3(5, 0, 0 <unfinished ...>
+11216 dup3(3, 0, 0 <unfinished ...>
+11217 <... dup3 resumed>)               = 0
+11217 dup3(7, 1, 0 <unfinished ...>
+11216 <... dup3 resumed>)               = 0
+11217 <... dup3 resumed>)               = 1
+11216 dup3(7, 1, 0 <unfinished ...>
+11217 close(3 <unfinished ...>
+11216 <... dup3 resumed>)               = 1
+11217 <... close resumed>)              = 0
+11216 close(3 <unfinished ...>
+11217 close(4 <unfinished ...>
+11216 <... close resumed>)              = 0
+11217 <... close resumed>)              = 0
+11216 close(4 <unfinished ...>
+11217 close(5 <unfinished ...>
+11216 <... close resumed>)              = 0
+11217 <... close resumed>)              = 0
+11216 close(5 <unfinished ...>
+11217 close(6 <unfinished ...>
+11216 <... close resumed>)              = 0
+11217 <... close resumed>)              = 0
+11217 close(7 <unfinished ...>
+11216 close(6)                          = 0
+11216 close(7)                          = 0
+11216 getpid()                          = 11216
+11216 getppid()                         = 11190
+11217 <... close resumed>)              = 0
+11216 write(2, "Child PID=11216, parent PID=1119"..., 34 <unfinished ...>
+11217 getpid( <unfinished ...>
+11216 <... write resumed>)              = 34
+11216 execve("./child", ["child"], 0xffffe3269998 /* 61 vars */ <unfinished ...>
+11217 <... getpid resumed>)             = 11217
+11217 getppid( <unfinished ...>
+11216 <... execve resumed>)             = 0
+11217 <... getppid resumed>)            = 11190
+11216 brk(NULL <unfinished ...>
+11217 write(2, "Child PID=11217, parent PID=1119"..., 34 <unfinished ...>
+11216 <... brk resumed>)                = 0xc8b108e6d000
+11216 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+11217 <... write resumed>)              = 34
+11216 <... mmap resumed>)               = 0xe4b294b3e000
+11216 faccessat(AT_FDCWD, "/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+11216 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC <unfinished ...>
+11217 execve("./child", ["child"], 0xffffe3269998 /* 61 vars */ <unfinished ...>
+11216 <... openat resumed>)             = 3
+11216 fstat(3, {st_mode=S_IFREG|0644, st_size=56447, ...}) = 0
+11216 mmap(NULL, 56447, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+11217 <... execve resumed>)             = 0
+11216 <... mmap resumed>)               = 0xe4b294b30000
+11217 brk(NULL <unfinished ...>
+11216 close(3 <unfinished ...>
+11217 <... brk resumed>)                = 0xbb337fd7d000
+11216 <... close resumed>)              = 0
+11216 openat(AT_FDCWD, "/lib/aarch64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC <unfinished ...>
+11217 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xef36c1bdb000
+11216 <... openat resumed>)             = 3
+11217 faccessat(AT_FDCWD, "/etc/ld.so.preload", R_OK <unfinished ...>
+11216 read(3,  <unfinished ...>
+11217 <... faccessat resumed>)          = -1 ENOENT (No such file or directory)
+11216 <... read resumed>"\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\360\206\2\0\0\0\0\0"..., 832) = 832
+11217 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC <unfinished ...>
+11216 fstat(3,  <unfinished ...>
+11217 <... openat resumed>)             = 3
+11216 <... fstat resumed>{st_mode=S_IFREG|0755, st_size=1722920, ...}) = 0
+11217 fstat(3, {st_mode=S_IFREG|0644, st_size=56447, ...}) = 0
+11216 mmap(NULL, 1892240, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_DENYWRITE, -1, 0 <unfinished ...>
+11217 mmap(NULL, 56447, PROT_READ, MAP_PRIVATE, 3, 0) = 0xef36c1bcd000
+11216 <... mmap resumed>)               = 0xe4b29493a000
+11217 close(3 <unfinished ...>
+11216 mmap(0xe4b294940000, 1826704, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0 <unfinished ...>
+11217 <... close resumed>)              = 0
+11216 <... mmap resumed>)               = 0xe4b294940000
+11217 openat(AT_FDCWD, "/lib/aarch64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC <unfinished ...>
+11216 munmap(0xe4b29493a000, 24576 <unfinished ...>
+11217 <... openat resumed>)             = 3
+11216 <... munmap resumed>)             = 0
+11217 read(3,  <unfinished ...>
+11216 munmap(0xe4b294afe000, 40848 <unfinished ...>
+11217 <... read resumed>"\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\360\206\2\0\0\0\0\0"..., 832) = 832
+11216 <... munmap resumed>)             = 0
+11217 fstat(3,  <unfinished ...>
+11216 mprotect(0xe4b294ada000, 77824, PROT_NONE <unfinished ...>
+11217 <... fstat resumed>{st_mode=S_IFREG|0755, st_size=1722920, ...}) = 0
+11216 <... mprotect resumed>)           = 0
+11217 mmap(NULL, 1892240, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_DENYWRITE, -1, 0 <unfinished ...>
+11216 mmap(0xe4b294aed000, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19d000 <unfinished ...>
+11217 <... mmap resumed>)               = 0xef36c19d7000
+11216 <... mmap resumed>)               = 0xe4b294aed000
+11217 mmap(0xef36c19e0000, 1826704, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0) = 0xef36c19e0000
+11216 mmap(0xe4b294af2000, 49040, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+11217 munmap(0xef36c19d7000, 36864 <unfinished ...>
+11216 <... mmap resumed>)               = 0xe4b294af2000
+11217 <... munmap resumed>)             = 0
+11217 munmap(0xef36c1b9e000, 28560 <unfinished ...>
+11216 close(3 <unfinished ...>
+11217 <... munmap resumed>)             = 0
+11216 <... close resumed>)              = 0
+11217 mprotect(0xef36c1b7a000, 77824, PROT_NONE) = 0
+11216 set_tid_address(0xe4b294b3efb0 <unfinished ...>
+11217 mmap(0xef36c1b8d000, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19d000 <unfinished ...>
+11216 <... set_tid_address resumed>)    = 11216
+11217 <... mmap resumed>)               = 0xef36c1b8d000
+11216 set_robust_list(0xe4b294b3efc0, 24 <unfinished ...>
+11217 mmap(0xef36c1b92000, 49040, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+11216 <... set_robust_list resumed>)    = 0
+11217 <... mmap resumed>)               = 0xef36c1b92000
+11216 rseq(0xe4b294b3f600, 0x20, 0, 0xd428bc00 <unfinished ...>
+11217 close(3 <unfinished ...>
+11216 <... rseq resumed>)               = 0
+11217 <... close resumed>)              = 0
+11217 set_tid_address(0xef36c1bdbfb0 <unfinished ...>
+11216 mprotect(0xe4b294aed000, 12288, PROT_READ <unfinished ...>
+11217 <... set_tid_address resumed>)    = 11217
+11216 <... mprotect resumed>)           = 0
+11217 set_robust_list(0xef36c1bdbfc0, 24 <unfinished ...>
+11216 mprotect(0xc8b0e44df000, 4096, PROT_READ <unfinished ...>
+11217 <... set_robust_list resumed>)    = 0
+11216 <... mprotect resumed>)           = 0
+11217 rseq(0xef36c1bdc600, 0x20, 0, 0xd428bc00 <unfinished ...>
+11216 mprotect(0xe4b294b46000, 8192, PROT_READ <unfinished ...>
+11217 <... rseq resumed>)               = 0
+11217 mprotect(0xef36c1b8d000, 12288, PROT_READ <unfinished ...>
+11216 <... mprotect resumed>)           = 0
+11217 <... mprotect resumed>)           = 0
+11216 prlimit64(0, RLIMIT_STACK, NULL,  <unfinished ...>
+11217 mprotect(0xbb33711df000, 4096, PROT_READ <unfinished ...>
+11216 <... prlimit64 resumed>{rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+11217 <... mprotect resumed>)           = 0
+11216 munmap(0xe4b294b30000, 56447 <unfinished ...>
+11217 mprotect(0xef36c1be3000, 8192, PROT_READ <unfinished ...>
+11216 <... munmap resumed>)             = 0
+11217 <... mprotect resumed>)           = 0
+11216 getrandom( <unfinished ...>
+11217 prlimit64(0, RLIMIT_STACK, NULL,  <unfinished ...>
+11216 <... getrandom resumed>"\x77\x82\xbe\x75\xb5\x80\xf8\x25", 8, GRND_NONBLOCK) = 8
+11217 <... prlimit64 resumed>{rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+11216 brk(NULL <unfinished ...>
+11217 munmap(0xef36c1bcd000, 56447 <unfinished ...>
+11216 <... brk resumed>)                = 0xc8b108e6d000
+11217 <... munmap resumed>)             = 0
+11216 brk(0xc8b108e8e000 <unfinished ...>
+11217 getrandom( <unfinished ...>
+11216 <... brk resumed>)                = 0xc8b108e8e000
+11217 <... getrandom resumed>"\x7a\x6c\xbc\xb0\x4f\x2b\x14\x26", 8, GRND_NONBLOCK) = 8
+11217 brk(NULL)                         = 0xbb337fd7d000
+11217 brk(0xbb337fd9e000 <unfinished ...>
+11216 fstat(0,  <unfinished ...>
+11217 <... brk resumed>)                = 0xbb337fd9e000
+11217 fstat(0,  <unfinished ...>
+11216 <... fstat resumed>{st_mode=S_IFIFO|0600, st_size=0, ...}) = 0
+11217 <... fstat resumed>{st_mode=S_IFIFO|0600, st_size=0, ...}) = 0
+11216 read(0,  <unfinished ...>
+11217 read(0,  <unfinished ...>
+11190 <... read resumed>"hello\n", 1024) = 6
+11190 write(4, "hello\n", 6)            = 6
+11216 <... read resumed>"hello\n", 4096) = 6
+11190 read(0,  <unfinished ...>
+11216 fstat(1, {st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+11216 read(0,  <unfinished ...>
+11190 <... read resumed>"\n", 1024)     = 1
+11190 write(6, "\n", 1)                 = 1
+11217 <... read resumed>"\n", 4096)     = 1
+11190 read(0,  <unfinished ...>
+11217 fstat(1, {st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+11217 read(0,  <unfinished ...>
+11190 <... read resumed>"dqw\n", 1024)  = 4
+11190 write(4, "dqw\n", 4)              = 4
+11190 read(0,  <unfinished ...>
+11216 <... read resumed>"dqw\n", 4096)  = 4
+11216 read(0,  <unfinished ...>
+11190 <... read resumed>"dqwdqwdqwd\n", 1024) = 11
+11190 write(6, "dqwdqwdqwd\n", 11)      = 11
+11190 read(0,  <unfinished ...>
+11217 <... read resumed>"dqwdqwdqwd\n", 4096) = 11
+11217 read(0,  <unfinished ...>
+11190 <... read resumed>"dwqdqw\n", 1024) = 7
+11190 write(4, "dwqdqw\n", 7)           = 7
+11216 <... read resumed>"dwqdqw\n", 4096) = 7
+11190 read(0,  <unfinished ...>
+11216 read(0,  <unfinished ...>
+11190 <... read resumed>"\n", 1024)     = 1
+11190 write(6, "\n", 1)                 = 1
+11217 <... read resumed>"\n", 4096)     = 1
+11190 read(0,  <unfinished ...>
+11217 read(0,  <unfinished ...>
+11190 <... read resumed>"", 1024)       = 0
+11190 close(4)                          = 0
+11190 close(6 <unfinished ...>
+11216 <... read resumed>"", 4096)       = 0
+11190 <... close resumed>)              = 0
+11217 <... read resumed>"", 4096)       = 0
+11216 write(1, "olleh\nwqd\nwqdqwd\n", 17 <unfinished ...>
+11190 wait4(11216,  <unfinished ...>
+11217 write(1, "\ndwqdwqdwqd\n\n", 13 <unfinished ...>
+11216 <... write resumed>)              = 17
+11217 <... write resumed>)              = 13
+11216 exit_group(0)                     = ?
+11217 exit_group(0)                     = ?
+11216 +++ exited with 0 +++
+11190 <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 11216
+11190 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=11216, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+11217 +++ exited with 0 +++
+11190 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=11217, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+11190 wait4(11217, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 11217
+11190 exit_group(0)                     = ?
+11190 +++ exited with 0 +++

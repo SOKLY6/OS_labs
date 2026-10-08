@@ -1,0 +1,112 @@
+11374 execve("./parent", ["./parent"], 0xffffc1391790 /* 61 vars */) = 0
+11374 openat(AT_FDCWD</home/sokly6/OS/lab_2>, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3</etc/ld.so.cache>
+11374 close(3</etc/ld.so.cache>)        = 0
+11374 openat(AT_FDCWD</home/sokly6/OS/lab_2>, "/lib/aarch64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3</usr/lib/aarch64-linux-gnu/libc.so.6>
+11374 read(3</usr/lib/aarch64-linux-gnu/libc.so.6>, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\360\206\2\0\0\0\0\0@\0\0\0\0\0\0\0\350:\32\0\0\0\0\0\0\0\0\0@\08\0\n\0@\0=\0<\0\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0000\2\0\0\0\0\0\0000\2\0\0\0\0\0\0\10\0\0\0\0\0\0\0\3\0\0\0\4\0\0\0"..., 832) = 832
+11374 close(3</usr/lib/aarch64-linux-gnu/libc.so.6>) = 0
+11374 rt_sigaction(SIGPIPE, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_INTERRUPT|SA_NODEFER|SA_RESETHAND|0xffffffff00000000}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+11374 read(0</dev/pts/1<char 136:1>>, "test_1\n", 1024) = 7
+11374 read(0</dev/pts/1<char 136:1>>, "test_2\n", 1024) = 7
+11374 pipe2([3<pipe:[137738]>, 4<pipe:[137738]>], 0) = 0
+11374 pipe2([5<pipe:[137740]>, 6<pipe:[137740]>], 0) = 0
+11374 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0xff9733109fb0) = 11438
+11374 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0xff9733109fb0) = 11439
+11374 close(3<pipe:[137738]> <unfinished ...>
+11438 openat(AT_FDCWD</home/sokly6/OS/lab_2>, "test_1", O_WRONLY|O_CREAT|O_TRUNC, 0644 <unfinished ...>
+11374 <... close resumed>)              = 0
+11438 <... openat resumed>)             = 7</home/sokly6/OS/lab_2/test_1>
+11374 close(5<pipe:[137740]> <unfinished ...>
+11438 dup3(3<pipe:[137738]>, 0</dev/pts/1<char 136:1>>, 0 <unfinished ...>
+11374 <... close resumed>)              = 0
+11438 <... dup3 resumed>)               = 0<pipe:[137738]>
+11374 read(0</dev/pts/1<char 136:1>>,  <unfinished ...>
+11438 dup3(7</home/sokly6/OS/lab_2/test_1>, 1</dev/pts/1<char 136:1>>, 0) = 1</home/sokly6/OS/lab_2/test_1>
+11438 close(3<pipe:[137738]>)           = 0
+11438 close(4<pipe:[137738]> <unfinished ...>
+11439 openat(AT_FDCWD</home/sokly6/OS/lab_2>, "test_2", O_WRONLY|O_CREAT|O_TRUNC, 0644 <unfinished ...>
+11438 <... close resumed>)              = 0
+11439 <... openat resumed>)             = 7</home/sokly6/OS/lab_2/test_2>
+11438 close(5<pipe:[137740]> <unfinished ...>
+11439 dup3(5<pipe:[137740]>, 0</dev/pts/1<char 136:1>>, 0 <unfinished ...>
+11438 <... close resumed>)              = 0
+11439 <... dup3 resumed>)               = 0<pipe:[137740]>
+11438 close(6<pipe:[137740]> <unfinished ...>
+11439 dup3(7</home/sokly6/OS/lab_2/test_2>, 1</dev/pts/1<char 136:1>>, 0 <unfinished ...>
+11438 <... close resumed>)              = 0
+11439 <... dup3 resumed>)               = 1</home/sokly6/OS/lab_2/test_2>
+11438 close(7</home/sokly6/OS/lab_2/test_1> <unfinished ...>
+11439 close(3<pipe:[137738]> <unfinished ...>
+11438 <... close resumed>)              = 0
+11439 <... close resumed>)              = 0
+11439 close(4<pipe:[137738]>)           = 0
+11439 close(5<pipe:[137740]>)           = 0
+11438 write(2</dev/pts/1<char 136:1>>, "Child PID=11438, parent PID=11374\n", 34 <unfinished ...>
+11439 close(6<pipe:[137740]> <unfinished ...>
+11438 <... write resumed>)              = 34
+11439 <... close resumed>)              = 0
+11438 execve("./child", ["child"], 0xffffd47444d8 /* 61 vars */ <unfinished ...>
+11439 close(7</home/sokly6/OS/lab_2/test_2>) = 0
+11439 write(2</dev/pts/1<char 136:1>>, "Child PID=11439, parent PID=11374\n", 34) = 34
+11439 execve("./child", ["child"], 0xffffd47444d8 /* 61 vars */ <unfinished ...>
+11438 <... execve resumed>)             = 0
+11439 <... execve resumed>)             = 0
+11439 openat(AT_FDCWD</home/sokly6/OS/lab_2>, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC <unfinished ...>
+11438 openat(AT_FDCWD</home/sokly6/OS/lab_2>, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC <unfinished ...>
+11439 <... openat resumed>)             = 3</etc/ld.so.cache>
+11438 <... openat resumed>)             = 3</etc/ld.so.cache>
+11439 close(3</etc/ld.so.cache>)        = 0
+11438 close(3</etc/ld.so.cache> <unfinished ...>
+11439 openat(AT_FDCWD</home/sokly6/OS/lab_2>, "/lib/aarch64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC <unfinished ...>
+11438 <... close resumed>)              = 0
+11439 <... openat resumed>)             = 3</usr/lib/aarch64-linux-gnu/libc.so.6>
+11438 openat(AT_FDCWD</home/sokly6/OS/lab_2>, "/lib/aarch64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC <unfinished ...>
+11439 read(3</usr/lib/aarch64-linux-gnu/libc.so.6>,  <unfinished ...>
+11438 <... openat resumed>)             = 3</usr/lib/aarch64-linux-gnu/libc.so.6>
+11439 <... read resumed>"\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\360\206\2\0\0\0\0\0@\0\0\0\0\0\0\0\350:\32\0\0\0\0\0\0\0\0\0@\08\0\n\0@\0=\0<\0\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0000\2\0\0\0\0\0\0000\2\0\0\0\0\0\0\10\0\0\0\0\0\0\0\3\0\0\0\4\0\0\0"..., 832) = 832
+11438 read(3</usr/lib/aarch64-linux-gnu/libc.so.6>, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\360\206\2\0\0\0\0\0@\0\0\0\0\0\0\0\350:\32\0\0\0\0\0\0\0\0\0@\08\0\n\0@\0=\0<\0\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0000\2\0\0\0\0\0\0000\2\0\0\0\0\0\0\10\0\0\0\0\0\0\0\3\0\0\0\4\0\0\0"..., 832) = 832
+11439 close(3</usr/lib/aarch64-linux-gnu/libc.so.6>) = 0
+11438 close(3</usr/lib/aarch64-linux-gnu/libc.so.6>) = 0
+11439 read(0<pipe:[137740]>,  <unfinished ...>
+11438 read(0<pipe:[137738]>,  <unfinished ...>
+11374 <... read resumed>"uwu\n", 1024)  = 4
+11374 write(4<pipe:[137738]>, "uwu\n", 4) = 4
+11374 read(0</dev/pts/1<char 136:1>>,  <unfinished ...>
+11438 <... read resumed>"uwu\n", 4096)  = 4
+11438 read(0<pipe:[137738]>,  <unfinished ...>
+11374 <... read resumed>"uwu\n", 1024)  = 4
+11374 write(6<pipe:[137740]>, "uwu\n", 4) = 4
+11374 read(0</dev/pts/1<char 136:1>>,  <unfinished ...>
+11439 <... read resumed>"uwu\n", 4096)  = 4
+11439 read(0<pipe:[137740]>,  <unfinished ...>
+11374 <... read resumed>"ahahahhaha\n", 1024) = 11
+11374 write(4<pipe:[137738]>, "ahahahhaha\n", 11) = 11
+11438 <... read resumed>"ahahahhaha\n", 4096) = 11
+11374 read(0</dev/pts/1<char 136:1>>,  <unfinished ...>
+11438 read(0<pipe:[137738]>,  <unfinished ...>
+11374 <... read resumed>"azazzaza\n", 1024) = 9
+11374 write(6<pipe:[137740]>, "azazzaza\n", 9) = 9
+11439 <... read resumed>"azazzaza\n", 4096) = 9
+11374 read(0</dev/pts/1<char 136:1>>,  <unfinished ...>
+11439 read(0<pipe:[137740]>,  <unfinished ...>
+11374 <... read resumed>"", 1024)       = 0
+11374 close(4<pipe:[137738]>)           = 0
+11438 <... read resumed>"", 4096)       = 0
+11374 close(6<pipe:[137740]> <unfinished ...>
+11438 write(1</home/sokly6/OS/lab_2/test_1>, "uwu\nahahhahaha\n", 15 <unfinished ...>
+11374 <... close resumed>)              = 0
+11439 <... read resumed>"", 4096)       = 0
+11374 wait4(11438,  <unfinished ...>
+11438 <... write resumed>)              = 15
+11439 write(1</home/sokly6/OS/lab_2/test_2>, "uwu\nazazzaza\n", 13 <unfinished ...>
+11438 exit_group(0)                     = ?
+11439 <... write resumed>)              = 13
+11439 exit_group(0)                     = ?
+11438 +++ exited with 0 +++
+11374 <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 11438
+11374 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=11438, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+11374 wait4(11439,  <unfinished ...>
+11439 +++ exited with 0 +++
+11374 <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 11439
+11374 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=11439, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+11374 exit_group(0)                     = ?
+11374 +++ exited with 0 +++

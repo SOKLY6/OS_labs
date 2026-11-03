@@ -1,0 +1,48 @@
+4607  execve("./lab3", ["./lab3", "1000000", "-t", "4"], 0xfffff91b0788 /* 71 vars */) = 0
+4607  brk(NULL)                         = 0xc5835d32a000
+4607  mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xfc612b657000
+4607  mmap(NULL, 56447, PROT_READ, MAP_PRIVATE, 3</etc/ld.so.cache>, 0) = 0xfc612b649000
+4607  mmap(NULL, 1892240, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_DENYWRITE, -1, 0) = 0xfc612b453000
+4607  mmap(0xfc612b460000, 1826704, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3</usr/lib/aarch64-linux-gnu/libc.so.6>, 0) = 0xfc612b460000
+4607  munmap(0xfc612b453000, 53248)     = 0
+4607  munmap(0xfc612b61e000, 12176)     = 0
+4607  mmap(0xfc612b60d000, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3</usr/lib/aarch64-linux-gnu/libc.so.6>, 0x19d000) = 0xfc612b60d000
+4607  mmap(0xfc612b612000, 49040, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xfc612b612000
+4607  munmap(0xfc612b649000, 56447)     = 0
+4607  brk(NULL)                         = 0xc5835d32a000
+4607  brk(0xc5835d34b000)               = 0xc5835d34b000
+4607  mmap(NULL, 4001792, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xfc612b08f000
+4607  mmap(NULL, 4001792, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xfc612acbe000
+4607  mmap(NULL, 8454144, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0xfc612a4ae000
+4607  clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=0xfc612acbd270, parent_tid=0xfc612acbd270, exit_signal=0, stack=0xfc612a4ae000, stack_size=0x80ea60, tls=0xfc612acbd8e0} => {parent_tid=[4608]}, 88) = 4608
+4607  mmap(NULL, 8454144, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0xfc6129c9e000
+4608  gettid()                          = 4608
+4607  clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=0xfc612a4ad270, parent_tid=0xfc612a4ad270, exit_signal=0, stack=0xfc6129c9e000, stack_size=0x80ea60, tls=0xfc612a4ad8e0} => {parent_tid=[4609]}, 88) = 4609
+4607  mmap(NULL, 8454144, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0xfc612948e000
+4607  clone3({flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, child_tid=0xfc6129c9d270, parent_tid=0xfc6129c9d270, exit_signal=0, stack=0xfc612948e000, stack_size=0x80ea60, tls=0xfc6129c9d8e0} => {parent_tid=[4610]}, 88) = 4610
+4607  gettid()                          = 4607
+4610  gettid( <unfinished ...>
+4609  gettid( <unfinished ...>
+4610  <... gettid resumed>)             = 4610
+4609  <... gettid resumed>)             = 4609
+4607  futex(0xfc612acbd270, FUTEX_WAIT_BITSET|FUTEX_CLOCK_REALTIME, 4608, NULL, FUTEX_BITSET_MATCH_ANY <unfinished ...>
+4608  exit(0)                           = ?
+4608  +++ exited with 0 +++
+4607  <... futex resumed>)              = -1 EAGAIN (Resource temporarily unavailable)
+4607  futex(0xfc612a4ad270, FUTEX_WAIT_BITSET|FUTEX_CLOCK_REALTIME, 4609, NULL, FUTEX_BITSET_MATCH_ANY <unfinished ...>
+4609  exit(0)                           = ?
+4609  +++ exited with 0 +++
+4607  <... futex resumed>)              = 0
+4607  futex(0xfc6129c9d270, FUTEX_WAIT_BITSET|FUTEX_CLOCK_REALTIME, 4610, NULL, FUTEX_BITSET_MATCH_ANY <unfinished ...>
+4610  exit(0)                           = ?
+4607  <... futex resumed>)              = 0
+4610  +++ exited with 0 +++
+4607  write(1</dev/pts/0<char 136:0>>, "N=1000000 threads=4 time=0.057443 s sorted=yes\n", 47) = 47
+4607  write(1</dev/pts/0<char 136:0>>, "PID=4607 TID=4607 elements=250000\n", 34) = 34
+4607  write(1</dev/pts/0<char 136:0>>, "PID=4607 TID=4608 elements=250000\n", 34) = 34
+4607  write(1</dev/pts/0<char 136:0>>, "PID=4607 TID=4609 elements=250000\n", 34) = 34
+4607  write(1</dev/pts/0<char 136:0>>, "PID=4607 TID=4610 elements=250000\n", 34) = 34
+4607  munmap(0xfc612acbe000, 4001792)   = 0
+4607  munmap(0xfc612b08f000, 4001792)   = 0
+4607  exit_group(0)                     = ?
+4607  +++ exited with 0 +++

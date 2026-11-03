@@ -1,0 +1,297 @@
+7318  execve("./parent", ["./parent"], 0xfffff1a5f5e8 /* 73 vars */) = 0
+7318  brk(NULL)                         = 0xc7d52cf00000
+7318  mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xfe23b98d1000
+7318  faccessat(AT_FDCWD, "/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+7318  openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+7318  fstat(3, {st_mode=S_IFREG|0644, st_size=56447, ...}) = 0
+7318  mmap(NULL, 56447, PROT_READ, MAP_PRIVATE, 3, 0) = 0xfe23b98c3000
+7318  close(3)                          = 0
+7318  openat(AT_FDCWD, "/lib/aarch64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+7318  read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\360\206\2\0\0\0\0\0"..., 832) = 832
+7318  fstat(3, {st_mode=S_IFREG|0755, st_size=1722920, ...}) = 0
+7318  mmap(NULL, 1892240, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_DENYWRITE, -1, 0) = 0xfe23b96cd000
+7318  mmap(0xfe23b96d0000, 1826704, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0) = 0xfe23b96d0000
+7318  munmap(0xfe23b96cd000, 12288)     = 0
+7318  munmap(0xfe23b988e000, 53136)     = 0
+7318  mprotect(0xfe23b986a000, 77824, PROT_NONE) = 0
+7318  mmap(0xfe23b987d000, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19d000) = 0xfe23b987d000
+7318  mmap(0xfe23b9882000, 49040, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xfe23b9882000
+7318  close(3)                          = 0
+7318  set_tid_address(0xfe23b98d1fb0)   = 7318
+7318  set_robust_list(0xfe23b98d1fc0, 24) = 0
+7318  rseq(0xfe23b98d2600, 0x20, 0, 0xd428bc00) = 0
+7318  mprotect(0xfe23b987d000, 12288, PROT_READ) = 0
+7318  mprotect(0xc7d4f37ff000, 4096, PROT_READ) = 0
+7318  mprotect(0xfe23b98d9000, 8192, PROT_READ) = 0
+7318  prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+7318  munmap(0xfe23b98c3000, 56447)     = 0
+7318  rt_sigaction(SIGCHLD, {sa_handler=0xc7d4f37e1198, sa_mask=[], sa_flags=SA_NOCLDSTOP}, NULL, 8) = 0
+7318  rt_sigprocmask(SIG_BLOCK, [USR1 USR2 CHLD], NULL, 8) = 0
+7318  fcntl(0, F_GETFD)                 = 0
+7318  fcntl(1, F_GETFD)                 = 0
+7318  fcntl(2, F_GETFD)                 = 0
+7318  getrandom("\xdf\x79\xd9\xd3\xdd\xed\x83\xe8", 8, GRND_NONBLOCK) = 8
+7318  brk(NULL)                         = 0xc7d52cf00000
+7318  brk(0xc7d52cf21000)               = 0xc7d52cf21000
+7318  fstat(0, {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0x2), ...}) = 0
+7318  read(0, "test1\n", 1024)          = 6
+7318  read(0, "test2\n", 1024)          = 6
+7318  openat(AT_FDCWD, "/tmp/lab4-ZNN9LL", O_RDWR|O_CREAT|O_EXCL, 0600) = 3
+7318  unlinkat(AT_FDCWD, "/tmp/lab4-ZNN9LL", 0) = 0
+7318  openat(AT_FDCWD, "/tmp/lab4-PG7mBQ", O_RDWR|O_CREAT|O_EXCL, 0600) = 4
+7318  unlinkat(AT_FDCWD, "/tmp/lab4-PG7mBQ", 0) = 0
+7318  clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0xfe23b98d1fb0) = 7403
+7403  set_robust_list(0xfe23b98d1fc0, 24) = 0
+7318  clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD <unfinished ...>
+7403  openat(AT_FDCWD, "test1", O_WRONLY|O_CREAT|O_TRUNC, 0644) = 5
+7404  set_robust_list(0xfe23b98d1fc0, 24 <unfinished ...>
+7403  dup3(3, 0, 0 <unfinished ...>
+7404  <... set_robust_list resumed>)    = 0
+7403  <... dup3 resumed>)               = 0
+7318  <... clone resumed>, child_tidptr=0xfe23b98d1fb0) = 7404
+7404  openat(AT_FDCWD, "test2", O_WRONLY|O_CREAT|O_TRUNC, 0644 <unfinished ...>
+7403  dup3(5, 1, 0 <unfinished ...>
+7318  read(0,  <unfinished ...>
+7404  <... openat resumed>)             = 5
+7403  <... dup3 resumed>)               = 1
+7404  dup3(4, 0, 0 <unfinished ...>
+7403  close(3 <unfinished ...>
+7404  <... dup3 resumed>)               = 0
+7403  <... close resumed>)              = 0
+7404  dup3(5, 1, 0 <unfinished ...>
+7403  close(4 <unfinished ...>
+7404  <... dup3 resumed>)               = 1
+7403  <... close resumed>)              = 0
+7404  close(3 <unfinished ...>
+7403  close(5 <unfinished ...>
+7404  <... close resumed>)              = 0
+7403  <... close resumed>)              = 0
+7404  close(4 <unfinished ...>
+7403  getpid( <unfinished ...>
+7404  <... close resumed>)              = 0
+7404  close(5 <unfinished ...>
+7403  <... getpid resumed>)             = 7403
+7404  <... close resumed>)              = 0
+7403  getppid( <unfinished ...>
+7404  getpid( <unfinished ...>
+7403  <... getppid resumed>)            = 7318
+7404  <... getpid resumed>)             = 7404
+7403  write(2, "Child PID=7403, parent PID=7318\n", 32 <unfinished ...>
+7404  getppid( <unfinished ...>
+7403  <... write resumed>)              = 32
+7404  <... getppid resumed>)            = 7318
+7403  execve("./child", ["child"], 0xfffff8d7f428 /* 73 vars */ <unfinished ...>
+7404  write(2, "Child PID=7404, parent PID=7318\n", 32) = 32
+7404  execve("./child", ["child"], 0xfffff8d7f428 /* 73 vars */ <unfinished ...>
+7403  <... execve resumed>)             = 0
+7404  <... execve resumed>)             = 0
+7404  brk(NULL)                         = 0xc0408dc0a000
+7403  brk(NULL <unfinished ...>
+7404  mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+7403  <... brk resumed>)                = 0xc30a9c4f9000
+7404  <... mmap resumed>)               = 0xf3e33a6e8000
+7403  mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xe827293e7000
+7404  faccessat(AT_FDCWD, "/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+7403  faccessat(AT_FDCWD, "/etc/ld.so.preload", R_OK <unfinished ...>
+7404  openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC <unfinished ...>
+7403  <... faccessat resumed>)          = -1 ENOENT (No such file or directory)
+7404  <... openat resumed>)             = 3
+7403  openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC <unfinished ...>
+7404  fstat(3,  <unfinished ...>
+7403  <... openat resumed>)             = 3
+7404  <... fstat resumed>{st_mode=S_IFREG|0644, st_size=56447, ...}) = 0
+7403  fstat(3,  <unfinished ...>
+7404  mmap(NULL, 56447, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+7403  <... fstat resumed>{st_mode=S_IFREG|0644, st_size=56447, ...}) = 0
+7404  <... mmap resumed>)               = 0xf3e33a6da000
+7403  mmap(NULL, 56447, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+7404  close(3 <unfinished ...>
+7403  <... mmap resumed>)               = 0xe827293d9000
+7404  <... close resumed>)              = 0
+7403  close(3 <unfinished ...>
+7404  openat(AT_FDCWD, "/lib/aarch64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC <unfinished ...>
+7403  <... close resumed>)              = 0
+7403  openat(AT_FDCWD, "/lib/aarch64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC <unfinished ...>
+7404  <... openat resumed>)             = 3
+7403  <... openat resumed>)             = 3
+7404  read(3,  <unfinished ...>
+7403  read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\360\206\2\0\0\0\0\0"..., 832) = 832
+7404  <... read resumed>"\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\360\206\2\0\0\0\0\0"..., 832) = 832
+7404  fstat(3,  <unfinished ...>
+7403  fstat(3, {st_mode=S_IFREG|0755, st_size=1722920, ...}) = 0
+7404  <... fstat resumed>{st_mode=S_IFREG|0755, st_size=1722920, ...}) = 0
+7403  mmap(NULL, 1892240, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_DENYWRITE, -1, 0 <unfinished ...>
+7404  mmap(NULL, 1892240, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_DENYWRITE, -1, 0 <unfinished ...>
+7403  <... mmap resumed>)               = 0xe827291e3000
+7403  mmap(0xe827291f0000, 1826704, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0 <unfinished ...>
+7404  <... mmap resumed>)               = 0xf3e33a4e4000
+7403  <... mmap resumed>)               = 0xe827291f0000
+7404  mmap(0xf3e33a4f0000, 1826704, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0 <unfinished ...>
+7403  munmap(0xe827291e3000, 53248 <unfinished ...>
+7404  <... mmap resumed>)               = 0xf3e33a4f0000
+7403  <... munmap resumed>)             = 0
+7403  munmap(0xe827293ae000, 12176 <unfinished ...>
+7404  munmap(0xf3e33a4e4000, 49152)     = 0
+7403  <... munmap resumed>)             = 0
+7403  mprotect(0xe8272938a000, 77824, PROT_NONE <unfinished ...>
+7404  munmap(0xf3e33a6ae000, 16272 <unfinished ...>
+7403  <... mprotect resumed>)           = 0
+7403  mmap(0xe8272939d000, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19d000) = 0xe8272939d000
+7404  <... munmap resumed>)             = 0
+7403  mmap(0xe827293a2000, 49040, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xe827293a2000
+7403  close(3)                          = 0
+7403  set_tid_address(0xe827293e7fd0 <unfinished ...>
+7404  mprotect(0xf3e33a68a000, 77824, PROT_NONE <unfinished ...>
+7403  <... set_tid_address resumed>)    = 7403
+7404  <... mprotect resumed>)           = 0
+7403  set_robust_list(0xe827293e7fe0, 24 <unfinished ...>
+7404  mmap(0xf3e33a69d000, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19d000 <unfinished ...>
+7403  <... set_robust_list resumed>)    = 0
+7404  <... mmap resumed>)               = 0xf3e33a69d000
+7403  rseq(0xe827293e8620, 0x20, 0, 0xd428bc00) = 0
+7404  mmap(0xf3e33a6a2000, 49040, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+7403  mprotect(0xe8272939d000, 12288, PROT_READ) = 0
+7403  mprotect(0xc30a5f86f000, 4096, PROT_READ) = 0
+7403  mprotect(0xe827293ef000, 8192, PROT_READ) = 0
+7403  prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+7403  munmap(0xe827293d9000, 56447)     = 0
+7404  <... mmap resumed>)               = 0xf3e33a6a2000
+7404  close(3 <unfinished ...>
+7403  getppid()                         = 7318
+7404  <... close resumed>)              = 0
+7403  rt_sigprocmask(SIG_BLOCK, [USR1], NULL, 8) = 0
+7403  rt_sigtimedwait([USR1],  <unfinished ...>
+7404  set_tid_address(0xf3e33a6e8fd0)   = 7404
+7404  set_robust_list(0xf3e33a6e8fe0, 24) = 0
+7404  rseq(0xf3e33a6e9620, 0x20, 0, 0xd428bc00) = 0
+7404  mprotect(0xf3e33a69d000, 12288, PROT_READ) = 0
+7404  mprotect(0xc04084b0f000, 4096, PROT_READ) = 0
+7404  mprotect(0xf3e33a6f0000, 8192, PROT_READ) = 0
+7404  prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+7404  munmap(0xf3e33a6da000, 56447)     = 0
+7404  getppid()                         = 7318
+7404  rt_sigprocmask(SIG_BLOCK, [USR1], NULL, 8) = 0
+7404  rt_sigtimedwait([USR1],  <unfinished ...>
+7318  <... read resumed>"dawd\n", 1024) = 5
+7318  ftruncate(3, 6)                   = 0
+7318  mmap(NULL, 6, PROT_READ|PROT_WRITE, MAP_SHARED, 3, 0) = 0xfe23b98d0000
+7318  munmap(0xfe23b98d0000, 6)         = 0
+7318  kill(7403, SIGUSR1)               = 0
+7403  <... rt_sigtimedwait resumed>{si_signo=SIGUSR1, si_code=SI_USER, si_pid=7318, si_uid=1000}, NULL, 8) = 10 (SIGUSR1)
+7318  rt_sigtimedwait([USR2 CHLD],  <unfinished ...>
+7403  fstat(0, {st_mode=S_IFREG|0600, st_size=6, ...}) = 0
+7403  mmap(NULL, 6, PROT_READ|PROT_WRITE, MAP_PRIVATE, 0, 0) = 0xe827293e6000
+7403  fstat(1, {st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+7403  getrandom("\xd0\x65\x1c\xe6\x67\x76\xec\x4a", 8, GRND_NONBLOCK) = 8
+7403  brk(NULL)                         = 0xc30a9c4f9000
+7403  brk(0xc30a9c51a000)               = 0xc30a9c51a000
+7403  write(1, "dwad\n", 5)             = 5
+7403  munmap(0xe827293e6000, 6)         = 0
+7403  kill(7318, SIGUSR2 <unfinished ...>
+7318  <... rt_sigtimedwait resumed>{si_signo=SIGUSR2, si_code=SI_USER, si_pid=7403, si_uid=1000}, NULL, 8) = 12 (SIGUSR2)
+7403  <... kill resumed>)               = 0
+7318  read(0,  <unfinished ...>
+7403  rt_sigtimedwait([USR1],  <unfinished ...>
+7318  <... read resumed>"dawda\n", 1024) = 6
+7318  ftruncate(4, 7)                   = 0
+7318  mmap(NULL, 7, PROT_READ|PROT_WRITE, MAP_SHARED, 4, 0) = 0xfe23b98d0000
+7318  munmap(0xfe23b98d0000, 7)         = 0
+7318  kill(7404, SIGUSR1)               = 0
+7404  <... rt_sigtimedwait resumed>{si_signo=SIGUSR1, si_code=SI_USER, si_pid=7318, si_uid=1000}, NULL, 8) = 10 (SIGUSR1)
+7318  rt_sigtimedwait([USR2 CHLD],  <unfinished ...>
+7404  fstat(0, {st_mode=S_IFREG|0600, st_size=7, ...}) = 0
+7404  mmap(NULL, 7, PROT_READ|PROT_WRITE, MAP_PRIVATE, 0, 0) = 0xf3e33a6e7000
+7404  fstat(1, {st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+7404  getrandom("\x2c\xd5\x01\x74\xc7\x8e\x0c\x07", 8, GRND_NONBLOCK) = 8
+7404  brk(NULL)                         = 0xc0408dc0a000
+7404  brk(0xc0408dc2b000)               = 0xc0408dc2b000
+7404  write(1, "adwad\n", 6)            = 6
+7404  munmap(0xf3e33a6e7000, 7)         = 0
+7404  kill(7318, SIGUSR2)               = 0
+7318  <... rt_sigtimedwait resumed>{si_signo=SIGUSR2, si_code=SI_USER, si_pid=7404, si_uid=1000}, NULL, 8) = 12 (SIGUSR2)
+7404  rt_sigtimedwait([USR1],  <unfinished ...>
+7318  read(0, "dawda\n", 1024)          = 6
+7318  ftruncate(3, 7)                   = 0
+7318  mmap(NULL, 7, PROT_READ|PROT_WRITE, MAP_SHARED, 3, 0) = 0xfe23b98d0000
+7318  munmap(0xfe23b98d0000, 7)         = 0
+7318  kill(7403, SIGUSR1)               = 0
+7318  rt_sigtimedwait([USR2 CHLD],  <unfinished ...>
+7403  <... rt_sigtimedwait resumed>{si_signo=SIGUSR1, si_code=SI_USER, si_pid=7318, si_uid=1000}, NULL, 8) = 10 (SIGUSR1)
+7403  fstat(0, {st_mode=S_IFREG|0600, st_size=7, ...}) = 0
+7403  mmap(NULL, 7, PROT_READ|PROT_WRITE, MAP_PRIVATE, 0, 0) = 0xe827293e6000
+7403  write(1, "adwad\n", 6)            = 6
+7403  munmap(0xe827293e6000, 7)         = 0
+7403  kill(7318, SIGUSR2 <unfinished ...>
+7318  <... rt_sigtimedwait resumed>{si_signo=SIGUSR2, si_code=SI_USER, si_pid=7403, si_uid=1000}, NULL, 8) = 12 (SIGUSR2)
+7403  <... kill resumed>)               = 0
+7318  read(0,  <unfinished ...>
+7403  rt_sigtimedwait([USR1],  <unfinished ...>
+7318  <... read resumed>"dawd\n", 1024) = 5
+7318  ftruncate(4, 6)                   = 0
+7318  mmap(NULL, 6, PROT_READ|PROT_WRITE, MAP_SHARED, 4, 0) = 0xfe23b98d0000
+7318  munmap(0xfe23b98d0000, 6)         = 0
+7318  kill(7404, SIGUSR1)               = 0
+7404  <... rt_sigtimedwait resumed>{si_signo=SIGUSR1, si_code=SI_USER, si_pid=7318, si_uid=1000}, NULL, 8) = 10 (SIGUSR1)
+7404  fstat(0,  <unfinished ...>
+7318  rt_sigtimedwait([USR2 CHLD],  <unfinished ...>
+7404  <... fstat resumed>{st_mode=S_IFREG|0600, st_size=6, ...}) = 0
+7404  mmap(NULL, 6, PROT_READ|PROT_WRITE, MAP_PRIVATE, 0, 0) = 0xf3e33a6e7000
+7404  write(1, "dwad\n", 5)             = 5
+7404  munmap(0xf3e33a6e7000, 6)         = 0
+7404  kill(7318, SIGUSR2)               = 0
+7318  <... rt_sigtimedwait resumed>{si_signo=SIGUSR2, si_code=SI_USER, si_pid=7404, si_uid=1000}, NULL, 8) = 12 (SIGUSR2)
+7404  rt_sigtimedwait([USR1],  <unfinished ...>
+7318  read(0, "0\n", 1024)              = 2
+7318  ftruncate(3, 3)                   = 0
+7318  mmap(NULL, 3, PROT_READ|PROT_WRITE, MAP_SHARED, 3, 0) = 0xfe23b98d0000
+7318  munmap(0xfe23b98d0000, 3)         = 0
+7318  kill(7403, SIGUSR1)               = 0
+7403  <... rt_sigtimedwait resumed>{si_signo=SIGUSR1, si_code=SI_USER, si_pid=7318, si_uid=1000}, NULL, 8) = 10 (SIGUSR1)
+7403  fstat(0, {st_mode=S_IFREG|0600, st_size=3, ...}) = 0
+7318  rt_sigtimedwait([USR2 CHLD],  <unfinished ...>
+7403  mmap(NULL, 3, PROT_READ|PROT_WRITE, MAP_PRIVATE, 0, 0) = 0xe827293e6000
+7403  write(1, "0\n", 2)                = 2
+7403  munmap(0xe827293e6000, 3)         = 0
+7403  kill(7318, SIGUSR2)               = 0
+7403  rt_sigtimedwait([USR1],  <unfinished ...>
+7318  <... rt_sigtimedwait resumed>{si_signo=SIGUSR2, si_code=SI_USER, si_pid=7403, si_uid=1000}, NULL, 8) = 12 (SIGUSR2)
+7318  read(0, "12\n", 1024)             = 3
+7318  ftruncate(4, 4)                   = 0
+7318  mmap(NULL, 4, PROT_READ|PROT_WRITE, MAP_SHARED, 4, 0) = 0xfe23b98d0000
+7318  munmap(0xfe23b98d0000, 4)         = 0
+7318  kill(7404, SIGUSR1)               = 0
+7318  rt_sigtimedwait([USR2 CHLD],  <unfinished ...>
+7404  <... rt_sigtimedwait resumed>{si_signo=SIGUSR1, si_code=SI_USER, si_pid=7318, si_uid=1000}, NULL, 8) = 10 (SIGUSR1)
+7404  fstat(0, {st_mode=S_IFREG|0600, st_size=4, ...}) = 0
+7404  mmap(NULL, 4, PROT_READ|PROT_WRITE, MAP_PRIVATE, 0, 0) = 0xf3e33a6e7000
+7404  write(1, "21\n", 3)               = 3
+7404  munmap(0xf3e33a6e7000, 4)         = 0
+7404  kill(7318, SIGUSR2 <unfinished ...>
+7318  <... rt_sigtimedwait resumed>{si_signo=SIGUSR2, si_code=SI_USER, si_pid=7404, si_uid=1000}, NULL, 8) = 12 (SIGUSR2)
+7404  <... kill resumed>)               = 0
+7318  read(0,  <unfinished ...>
+7404  rt_sigtimedwait([USR1],  <unfinished ...>
+7318  <... read resumed>"", 1024)       = 0
+7318  ftruncate(3, 0)                   = 0
+7318  kill(7403, SIGUSR1)               = 0
+7318  ftruncate(4, 0)                   = 0
+7318  kill(7404, SIGUSR1)               = 0
+7404  <... rt_sigtimedwait resumed>{si_signo=SIGUSR1, si_code=SI_USER, si_pid=7318, si_uid=1000}, NULL, 8) = 10 (SIGUSR1)
+7403  <... rt_sigtimedwait resumed>{si_signo=SIGUSR1, si_code=SI_USER, si_pid=7318, si_uid=1000}, NULL, 8) = 10 (SIGUSR1)
+7318  wait4(7403,  <unfinished ...>
+7404  fstat(0, {st_mode=S_IFREG|0600, st_size=0, ...}) = 0
+7404  close(1)                          = 0
+7404  close(0)                          = 0
+7404  exit_group(0)                     = ?
+7404  +++ exited with 0 +++
+7403  fstat(0, {st_mode=S_IFREG|0600, st_size=0, ...}) = 0
+7403  close(1)                          = 0
+7403  close(0)                          = 0
+7403  exit_group(0)                     = ?
+7403  +++ exited with 0 +++
+7318  <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 7403
+7318  close(3)                          = 0
+7318  wait4(7404, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 7404
+7318  close(4)                          = 0
+7318  exit_group(0)                     = ?
+7318  +++ exited with 0 +++

@@ -1,0 +1,123 @@
+5305  execve("./program2", ["./program2"], 0xffffe655cc50 /* 69 vars */) = 0
+5305  mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xff8e03867000
+5305  openat(AT_FDCWD</home/sokly6/OS/lab_5/src>, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3</etc/ld.so.cache>
+5305  fstat(3</etc/ld.so.cache>, {st_mode=S_IFREG|0644, st_size=56447, ...}) = 0
+5305  mmap(NULL, 56447, PROT_READ, MAP_PRIVATE, 3</etc/ld.so.cache>, 0) = 0xff8e03859000
+5305  close(3</etc/ld.so.cache>)        = 0
+5305  openat(AT_FDCWD</home/sokly6/OS/lab_5/src>, "/lib/aarch64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3</usr/lib/aarch64-linux-gnu/libc.so.6>
+5305  read(3</usr/lib/aarch64-linux-gnu/libc.so.6>, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\360\206\2\0\0\0\0\0@\0\0\0\0\0\0\0\350:\32\0\0\0\0\0\0\0\0\0@\08\0\n\0@\0=\0<\0\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0000\2\0\0\0\0\0\0000\2\0\0\0\0\0\0\10\0\0\0\0\0\0\0\3\0\0\0\4\0\0\0"..., 832) = 832
+5305  fstat(3</usr/lib/aarch64-linux-gnu/libc.so.6>, {st_mode=S_IFREG|0755, st_size=1722920, ...}) = 0
+5305  mmap(NULL, 1892240, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_DENYWRITE, -1, 0) = 0xff8e03663000
+5305  mmap(0xff8e03670000, 1826704, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3</usr/lib/aarch64-linux-gnu/libc.so.6>, 0) = 0xff8e03670000
+5305  munmap(0xff8e03663000, 53248)     = 0
+5305  munmap(0xff8e0382e000, 12176)     = 0
+5305  mprotect(0xff8e0380a000, 77824, PROT_NONE) = 0
+5305  mmap(0xff8e0381d000, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3</usr/lib/aarch64-linux-gnu/libc.so.6>, 0x19d000) = 0xff8e0381d000
+5305  mmap(0xff8e03822000, 49040, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xff8e03822000
+5305  close(3</usr/lib/aarch64-linux-gnu/libc.so.6>) = 0
+5305  mprotect(0xff8e0381d000, 12288, PROT_READ) = 0
+5305  mprotect(0xbf0272f9f000, 4096, PROT_READ) = 0
+5305  mprotect(0xff8e0386f000, 8192, PROT_READ) = 0
+5305  munmap(0xff8e03859000, 56447)     = 0
+5305  openat(AT_FDCWD</home/sokly6/OS/lab_5/src>, "./lib1.so", O_RDONLY|O_CLOEXEC) = 3</home/sokly6/OS/lab_5/src/lib1.so>
+5305  read(3</home/sokly6/OS/lab_5/src/lib1.so>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\0\0\0\0\0\0\0\0@\0\0\0\0\0\0\0H\t\1\0\0\0\0\0\0\0\0\0@\08\0\7\0@\0\32\0\31\0\1\0\0\0\5\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\354\10\0\0\0\0\0\0\354\10\0\0\0\0\0\0\0\0\1\0\0\0\0\0\1\0\0\0\6\0\0\0"..., 832) = 832
+5305  fstat(3</home/sokly6/OS/lab_5/src/lib1.so>, {st_mode=S_IFREG|0775, st_size=69576, ...}) = 0
+5305  mmap(NULL, 196656, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_DENYWRITE, -1, 0) = 0xff8e0363f000
+5305  mmap(0xff8e03640000, 131120, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3</home/sokly6/OS/lab_5/src/lib1.so>, 0) = 0xff8e03640000
+5305  munmap(0xff8e0363f000, 4096)      = 0
+5305  munmap(0xff8e03661000, 57392)     = 0
+5305  mprotect(0xff8e03641000, 122880, PROT_NONE) = 0
+5305  mmap(0xff8e0365f000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3</home/sokly6/OS/lab_5/src/lib1.so>, 0xf000) = 0xff8e0365f000
+5305  close(3</home/sokly6/OS/lab_5/src/lib1.so>) = 0
+5305  openat(AT_FDCWD</home/sokly6/OS/lab_5/src>, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3</etc/ld.so.cache>
+5305  fstat(3</etc/ld.so.cache>, {st_mode=S_IFREG|0644, st_size=56447, ...}) = 0
+5305  mmap(NULL, 56447, PROT_READ, MAP_PRIVATE, 3</etc/ld.so.cache>, 0) = 0xff8e03859000
+5305  close(3</etc/ld.so.cache>)        = 0
+5305  openat(AT_FDCWD</home/sokly6/OS/lab_5/src>, "/lib/aarch64-linux-gnu/libm.so.6", O_RDONLY|O_CLOEXEC) = 3</usr/lib/aarch64-linux-gnu/libm.so.6>
+5305  read(3</usr/lib/aarch64-linux-gnu/libm.so.6>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\0\0\0\0\0\0\0\0@\0\0\0\0\0\0\08\1\t\0\0\0\0\0\0\0\0\0@\08\0\7\0@\0\32\0\31\0\1\0\0\0\5\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\210J\10\0\0\0\0\0\210J\10\0\0\0\0\0\0\0\1\0\0\0\0\0\1\0\0\0\6\0\0\0"..., 832) = 832
+5305  fstat(3</usr/lib/aarch64-linux-gnu/libm.so.6>, {st_mode=S_IFREG|0644, st_size=591800, ...}) = 0
+5305  mmap(NULL, 720920, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_DENYWRITE, -1, 0) = 0xff8e0358f000
+5305  mmap(0xff8e03590000, 655384, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3</usr/lib/aarch64-linux-gnu/libm.so.6>, 0) = 0xff8e03590000
+5305  munmap(0xff8e0358f000, 4096)      = 0
+5305  munmap(0xff8e03631000, 57368)     = 0
+5305  mprotect(0xff8e03615000, 106496, PROT_NONE) = 0
+5305  mmap(0xff8e0362f000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3</usr/lib/aarch64-linux-gnu/libm.so.6>, 0x8f000) = 0xff8e0362f000
+5305  close(3</usr/lib/aarch64-linux-gnu/libm.so.6>) = 0
+5305  mprotect(0xff8e0362f000, 4096, PROT_READ) = 0
+5305  mprotect(0xff8e0365f000, 4096, PROT_READ) = 0
+5305  munmap(0xff8e03859000, 56447)     = 0
+5305  fstat(0</dev/pts/2<char 136:2>>, {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0x2), ...}) = 0
+5305  read(0</dev/pts/2<char 136:2>>, "1 0 1 0.2\n", 1024) = 10
+5305  fstat(1</dev/pts/2<char 136:2>>, {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0x2), ...}) = 0
+5305  write(1</dev/pts/2<char 136:2>>, "0.460465\n", 9) = 9
+5305  read(0</dev/pts/2<char 136:2>>, "0\n", 1024) = 2
+5305  munmap(0xff8e03640000, 131120)    = 0
+5305  munmap(0xff8e03590000, 655384)    = 0
+5305  openat(AT_FDCWD</home/sokly6/OS/lab_5/src>, "./lib2.so", O_RDONLY|O_CLOEXEC) = 3</home/sokly6/OS/lab_5/src/lib2.so>
+5305  read(3</home/sokly6/OS/lab_5/src/lib2.so>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\0\0\0\0\0\0\0\0@\0\0\0\0\0\0\0H\t\1\0\0\0\0\0\0\0\0\0@\08\0\7\0@\0\32\0\31\0\1\0\0\0\5\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\08\t\0\0\0\0\0\08\t\0\0\0\0\0\0\0\0\1\0\0\0\0\0\1\0\0\0\6\0\0\0"..., 832) = 832
+5305  fstat(3</home/sokly6/OS/lab_5/src/lib2.so>, {st_mode=S_IFREG|0775, st_size=69576, ...}) = 0
+5305  mmap(NULL, 196656, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_DENYWRITE, -1, 0) = 0xff8e0363f000
+5305  mmap(0xff8e03640000, 131120, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3</home/sokly6/OS/lab_5/src/lib2.so>, 0) = 0xff8e03640000
+5305  munmap(0xff8e0363f000, 4096)      = 0
+5305  munmap(0xff8e03661000, 57392)     = 0
+5305  mprotect(0xff8e03641000, 122880, PROT_NONE) = 0
+5305  mmap(0xff8e0365f000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3</home/sokly6/OS/lab_5/src/lib2.so>, 0xf000) = 0xff8e0365f000
+5305  close(3</home/sokly6/OS/lab_5/src/lib2.so>) = 0
+5305  openat(AT_FDCWD</home/sokly6/OS/lab_5/src>, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3</etc/ld.so.cache>
+5305  fstat(3</etc/ld.so.cache>, {st_mode=S_IFREG|0644, st_size=56447, ...}) = 0
+5305  mmap(NULL, 56447, PROT_READ, MAP_PRIVATE, 3</etc/ld.so.cache>, 0) = 0xff8e03859000
+5305  close(3</etc/ld.so.cache>)        = 0
+5305  openat(AT_FDCWD</home/sokly6/OS/lab_5/src>, "/lib/aarch64-linux-gnu/libm.so.6", O_RDONLY|O_CLOEXEC) = 3</usr/lib/aarch64-linux-gnu/libm.so.6>
+5305  read(3</usr/lib/aarch64-linux-gnu/libm.so.6>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\0\0\0\0\0\0\0\0@\0\0\0\0\0\0\08\1\t\0\0\0\0\0\0\0\0\0@\08\0\7\0@\0\32\0\31\0\1\0\0\0\5\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\210J\10\0\0\0\0\0\210J\10\0\0\0\0\0\0\0\1\0\0\0\0\0\1\0\0\0\6\0\0\0"..., 832) = 832
+5305  fstat(3</usr/lib/aarch64-linux-gnu/libm.so.6>, {st_mode=S_IFREG|0644, st_size=591800, ...}) = 0
+5305  mmap(NULL, 720920, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_DENYWRITE, -1, 0) = 0xff8e0358f000
+5305  mmap(0xff8e03590000, 655384, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3</usr/lib/aarch64-linux-gnu/libm.so.6>, 0) = 0xff8e03590000
+5305  munmap(0xff8e0358f000, 4096)      = 0
+5305  munmap(0xff8e03631000, 57368)     = 0
+5305  mprotect(0xff8e03615000, 106496, PROT_NONE) = 0
+5305  mmap(0xff8e0362f000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3</usr/lib/aarch64-linux-gnu/libm.so.6>, 0x8f000) = 0xff8e0362f000
+5305  close(3</usr/lib/aarch64-linux-gnu/libm.so.6>) = 0
+5305  mprotect(0xff8e0362f000, 4096, PROT_READ) = 0
+5305  mprotect(0xff8e0365f000, 4096, PROT_READ) = 0
+5305  munmap(0xff8e03859000, 56447)     = 0
+5305  read(0</dev/pts/2<char 136:2>>, "1 0 1 0.2\n", 1024) = 10
+5305  write(1</dev/pts/2<char 136:2>>, "0.458164\n", 9) = 9
+5305  read(0</dev/pts/2<char 136:2>>, "2 34 17\n", 1024) = 8
+5305  write(1</dev/pts/2<char 136:2>>, "17\n", 3) = 3
+5305  read(0</dev/pts/2<char 136:2>>, "0\n", 1024) = 2
+5305  munmap(0xff8e03640000, 131120)    = 0
+5305  munmap(0xff8e03590000, 655384)    = 0
+5305  openat(AT_FDCWD</home/sokly6/OS/lab_5/src>, "./lib1.so", O_RDONLY|O_CLOEXEC) = 3</home/sokly6/OS/lab_5/src/lib1.so>
+5305  read(3</home/sokly6/OS/lab_5/src/lib1.so>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\0\0\0\0\0\0\0\0@\0\0\0\0\0\0\0H\t\1\0\0\0\0\0\0\0\0\0@\08\0\7\0@\0\32\0\31\0\1\0\0\0\5\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\354\10\0\0\0\0\0\0\354\10\0\0\0\0\0\0\0\0\1\0\0\0\0\0\1\0\0\0\6\0\0\0"..., 832) = 832
+5305  fstat(3</home/sokly6/OS/lab_5/src/lib1.so>, {st_mode=S_IFREG|0775, st_size=69576, ...}) = 0
+5305  mmap(NULL, 196656, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_DENYWRITE, -1, 0) = 0xff8e0363f000
+5305  mmap(0xff8e03640000, 131120, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3</home/sokly6/OS/lab_5/src/lib1.so>, 0) = 0xff8e03640000
+5305  munmap(0xff8e0363f000, 4096)      = 0
+5305  munmap(0xff8e03661000, 57392)     = 0
+5305  mprotect(0xff8e03641000, 122880, PROT_NONE) = 0
+5305  mmap(0xff8e0365f000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3</home/sokly6/OS/lab_5/src/lib1.so>, 0xf000) = 0xff8e0365f000
+5305  close(3</home/sokly6/OS/lab_5/src/lib1.so>) = 0
+5305  openat(AT_FDCWD</home/sokly6/OS/lab_5/src>, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3</etc/ld.so.cache>
+5305  fstat(3</etc/ld.so.cache>, {st_mode=S_IFREG|0644, st_size=56447, ...}) = 0
+5305  mmap(NULL, 56447, PROT_READ, MAP_PRIVATE, 3</etc/ld.so.cache>, 0) = 0xff8e03859000
+5305  close(3</etc/ld.so.cache>)        = 0
+5305  openat(AT_FDCWD</home/sokly6/OS/lab_5/src>, "/lib/aarch64-linux-gnu/libm.so.6", O_RDONLY|O_CLOEXEC) = 3</usr/lib/aarch64-linux-gnu/libm.so.6>
+5305  read(3</usr/lib/aarch64-linux-gnu/libm.so.6>, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\0\0\0\0\0\0\0\0@\0\0\0\0\0\0\08\1\t\0\0\0\0\0\0\0\0\0@\08\0\7\0@\0\32\0\31\0\1\0\0\0\5\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\210J\10\0\0\0\0\0\210J\10\0\0\0\0\0\0\0\1\0\0\0\0\0\1\0\0\0\6\0\0\0"..., 832) = 832
+5305  fstat(3</usr/lib/aarch64-linux-gnu/libm.so.6>, {st_mode=S_IFREG|0644, st_size=591800, ...}) = 0
+5305  mmap(NULL, 720920, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_DENYWRITE, -1, 0) = 0xff8e0358f000
+5305  mmap(0xff8e03590000, 655384, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3</usr/lib/aarch64-linux-gnu/libm.so.6>, 0) = 0xff8e03590000
+5305  munmap(0xff8e0358f000, 4096)      = 0
+5305  munmap(0xff8e03631000, 57368)     = 0
+5305  mprotect(0xff8e03615000, 106496, PROT_NONE) = 0
+5305  mmap(0xff8e0362f000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3</usr/lib/aarch64-linux-gnu/libm.so.6>, 0x8f000) = 0xff8e0362f000
+5305  close(3</usr/lib/aarch64-linux-gnu/libm.so.6>) = 0
+5305  mprotect(0xff8e0362f000, 4096, PROT_READ) = 0
+5305  mprotect(0xff8e0365f000, 4096, PROT_READ) = 0
+5305  munmap(0xff8e03859000, 56447)     = 0
+5305  read(0</dev/pts/2<char 136:2>>, "2 5 25\n", 1024) = 7
+5305  write(1</dev/pts/2<char 136:2>>, "5\n", 2) = 2
+5305  read(0</dev/pts/2<char 136:2>>, "", 1024) = 0
+5305  munmap(0xff8e03640000, 131120)    = 0
+5305  munmap(0xff8e03590000, 655384)    = 0
+5305  exit_group(0)                     = ?
+5305  +++ exited with 0 +++

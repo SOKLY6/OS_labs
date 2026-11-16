@@ -1,0 +1,166 @@
+5926  execve("./program2", ["./program2"], 0xffffdc51e908 /* 69 vars */) = 0
+5926  brk(NULL)                         = 0xb7f483ca8000
+5926  mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xff57a6740000
+5926  faccessat(AT_FDCWD, "/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+5926  openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+5926  fstat(3, {st_mode=S_IFREG|0644, st_size=56447, ...}) = 0
+5926  mmap(NULL, 56447, PROT_READ, MAP_PRIVATE, 3, 0) = 0xff57a6732000
+5926  close(3)                          = 0
+5926  openat(AT_FDCWD, "/lib/aarch64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+5926  read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\360\206\2\0\0\0\0\0"..., 832) = 832
+5926  fstat(3, {st_mode=S_IFREG|0755, st_size=1722920, ...}) = 0
+5926  mmap(NULL, 1892240, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_DENYWRITE, -1, 0) = 0xff57a653c000
+5926  mmap(0xff57a6540000, 1826704, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0) = 0xff57a6540000
+5926  munmap(0xff57a653c000, 16384)     = 0
+5926  munmap(0xff57a66fe000, 49040)     = 0
+5926  mprotect(0xff57a66da000, 77824, PROT_NONE) = 0
+5926  mmap(0xff57a66ed000, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19d000) = 0xff57a66ed000
+5926  mmap(0xff57a66f2000, 49040, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xff57a66f2000
+5926  close(3)                          = 0
+5926  set_tid_address(0xff57a6740fb0)   = 5926
+5926  set_robust_list(0xff57a6740fc0, 24) = 0
+5926  rseq(0xff57a6741600, 0x20, 0, 0xd428bc00) = 0
+5926  mprotect(0xff57a66ed000, 12288, PROT_READ) = 0
+5926  mprotect(0xb7f4552ef000, 4096, PROT_READ) = 0
+5926  mprotect(0xff57a6748000, 8192, PROT_READ) = 0
+5926  prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+5926  munmap(0xff57a6732000, 56447)     = 0
+5926  getrandom("\x5c\xa8\x4c\xae\x8e\x64\x72\xca", 8, GRND_NONBLOCK) = 8
+5926  brk(NULL)                         = 0xb7f483ca8000
+5926  brk(0xb7f483cc9000)               = 0xb7f483cc9000
+5926  openat(AT_FDCWD, "./lib1.so", O_RDONLY|O_CLOEXEC) = 3
+5926  read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+5926  fstat(3, {st_mode=S_IFREG|0775, st_size=69576, ...}) = 0
+5926  getcwd("/home/sokly6/OS/lab_5/src", 128) = 26
+5926  mmap(NULL, 196656, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_DENYWRITE, -1, 0) = 0xff57a650f000
+5926  mmap(0xff57a6510000, 131120, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0) = 0xff57a6510000
+5926  munmap(0xff57a650f000, 4096)      = 0
+5926  munmap(0xff57a6531000, 57392)     = 0
+5926  mprotect(0xff57a6511000, 122880, PROT_NONE) = 0
+5926  mmap(0xff57a652f000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xf000) = 0xff57a652f000
+5926  close(3)                          = 0
+5926  openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+5926  fstat(3, {st_mode=S_IFREG|0644, st_size=56447, ...}) = 0
+5926  mmap(NULL, 56447, PROT_READ, MAP_PRIVATE, 3, 0) = 0xff57a6732000
+5926  close(3)                          = 0
+5926  openat(AT_FDCWD, "/lib/aarch64-linux-gnu/libm.so.6", O_RDONLY|O_CLOEXEC) = 3
+5926  read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+5926  fstat(3, {st_mode=S_IFREG|0644, st_size=591800, ...}) = 0
+5926  mmap(NULL, 720920, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_DENYWRITE, -1, 0) = 0xff57a645f000
+5926  mmap(0xff57a6460000, 655384, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0) = 0xff57a6460000
+5926  munmap(0xff57a645f000, 4096)      = 0
+5926  munmap(0xff57a6501000, 57368)     = 0
+5926  mprotect(0xff57a64e5000, 106496, PROT_NONE) = 0
+5926  mmap(0xff57a64ff000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x8f000) = 0xff57a64ff000
+5926  close(3)                          = 0
+5926  mprotect(0xff57a64ff000, 4096, PROT_READ) = 0
+5926  mprotect(0xff57a652f000, 4096, PROT_READ) = 0
+5926  munmap(0xff57a6732000, 56447)     = 0
+5926  fstat(0, {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0x2), ...}) = 0
+5926  read(0, "1 0 1 0.3\n", 1024)      = 10
+5926  fstat(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0x2), ...}) = 0
+5926  write(1, "0.461154\n", 9)         = 9
+5926  read(0, "0\n", 1024)              = 2
+5926  munmap(0xff57a6510000, 131120)    = 0
+5926  munmap(0xff57a6460000, 655384)    = 0
+5926  openat(AT_FDCWD, "./lib2.so", O_RDONLY|O_CLOEXEC) = 3
+5926  read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+5926  fstat(3, {st_mode=S_IFREG|0775, st_size=69576, ...}) = 0
+5926  getcwd("/home/sokly6/OS/lab_5/src", 128) = 26
+5926  mmap(NULL, 196656, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_DENYWRITE, -1, 0) = 0xff57a650f000
+5926  mmap(0xff57a6510000, 131120, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0) = 0xff57a6510000
+5926  munmap(0xff57a650f000, 4096)      = 0
+5926  munmap(0xff57a6531000, 57392)     = 0
+5926  mprotect(0xff57a6511000, 122880, PROT_NONE) = 0
+5926  mmap(0xff57a652f000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xf000) = 0xff57a652f000
+5926  close(3)                          = 0
+5926  openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+5926  fstat(3, {st_mode=S_IFREG|0644, st_size=56447, ...}) = 0
+5926  mmap(NULL, 56447, PROT_READ, MAP_PRIVATE, 3, 0) = 0xff57a6732000
+5926  close(3)                          = 0
+5926  openat(AT_FDCWD, "/lib/aarch64-linux-gnu/libm.so.6", O_RDONLY|O_CLOEXEC) = 3
+5926  read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+5926  fstat(3, {st_mode=S_IFREG|0644, st_size=591800, ...}) = 0
+5926  mmap(NULL, 720920, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_DENYWRITE, -1, 0) = 0xff57a645f000
+5926  mmap(0xff57a6460000, 655384, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0) = 0xff57a6460000
+5926  munmap(0xff57a645f000, 4096)      = 0
+5926  munmap(0xff57a6501000, 57368)     = 0
+5926  mprotect(0xff57a64e5000, 106496, PROT_NONE) = 0
+5926  mmap(0xff57a64ff000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x8f000) = 0xff57a64ff000
+5926  close(3)                          = 0
+5926  mprotect(0xff57a64ff000, 4096, PROT_READ) = 0
+5926  mprotect(0xff57a652f000, 4096, PROT_READ) = 0
+5926  munmap(0xff57a6732000, 56447)     = 0
+5926  read(0, "1 0 1 0.3\n", 1024)      = 10
+5926  write(1, "0.456788\n", 9)         = 9
+5926  read(0, "0\n", 1024)              = 2
+5926  munmap(0xff57a6510000, 131120)    = 0
+5926  munmap(0xff57a6460000, 655384)    = 0
+5926  openat(AT_FDCWD, "./lib1.so", O_RDONLY|O_CLOEXEC) = 3
+5926  read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+5926  fstat(3, {st_mode=S_IFREG|0775, st_size=69576, ...}) = 0
+5926  getcwd("/home/sokly6/OS/lab_5/src", 128) = 26
+5926  mmap(NULL, 196656, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_DENYWRITE, -1, 0) = 0xff57a650f000
+5926  mmap(0xff57a6510000, 131120, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0) = 0xff57a6510000
+5926  munmap(0xff57a650f000, 4096)      = 0
+5926  munmap(0xff57a6531000, 57392)     = 0
+5926  mprotect(0xff57a6511000, 122880, PROT_NONE) = 0
+5926  mmap(0xff57a652f000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xf000) = 0xff57a652f000
+5926  close(3)                          = 0
+5926  openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+5926  fstat(3, {st_mode=S_IFREG|0644, st_size=56447, ...}) = 0
+5926  mmap(NULL, 56447, PROT_READ, MAP_PRIVATE, 3, 0) = 0xff57a6732000
+5926  close(3)                          = 0
+5926  openat(AT_FDCWD, "/lib/aarch64-linux-gnu/libm.so.6", O_RDONLY|O_CLOEXEC) = 3
+5926  read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+5926  fstat(3, {st_mode=S_IFREG|0644, st_size=591800, ...}) = 0
+5926  mmap(NULL, 720920, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_DENYWRITE, -1, 0) = 0xff57a645f000
+5926  mmap(0xff57a6460000, 655384, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0) = 0xff57a6460000
+5926  munmap(0xff57a645f000, 4096)      = 0
+5926  munmap(0xff57a6501000, 57368)     = 0
+5926  mprotect(0xff57a64e5000, 106496, PROT_NONE) = 0
+5926  mmap(0xff57a64ff000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x8f000) = 0xff57a64ff000
+5926  close(3)                          = 0
+5926  mprotect(0xff57a64ff000, 4096, PROT_READ) = 0
+5926  mprotect(0xff57a652f000, 4096, PROT_READ) = 0
+5926  munmap(0xff57a6732000, 56447)     = 0
+5926  read(0, "2 45 20\n", 1024)        = 8
+5926  write(1, "5\n", 2)                = 2
+5926  read(0, "0\n", 1024)              = 2
+5926  munmap(0xff57a6510000, 131120)    = 0
+5926  munmap(0xff57a6460000, 655384)    = 0
+5926  openat(AT_FDCWD, "./lib2.so", O_RDONLY|O_CLOEXEC) = 3
+5926  read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+5926  fstat(3, {st_mode=S_IFREG|0775, st_size=69576, ...}) = 0
+5926  getcwd("/home/sokly6/OS/lab_5/src", 128) = 26
+5926  mmap(NULL, 196656, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_DENYWRITE, -1, 0) = 0xff57a650f000
+5926  mmap(0xff57a6510000, 131120, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0) = 0xff57a6510000
+5926  munmap(0xff57a650f000, 4096)      = 0
+5926  munmap(0xff57a6531000, 57392)     = 0
+5926  mprotect(0xff57a6511000, 122880, PROT_NONE) = 0
+5926  mmap(0xff57a652f000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xf000) = 0xff57a652f000
+5926  close(3)                          = 0
+5926  openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+5926  fstat(3, {st_mode=S_IFREG|0644, st_size=56447, ...}) = 0
+5926  mmap(NULL, 56447, PROT_READ, MAP_PRIVATE, 3, 0) = 0xff57a6732000
+5926  close(3)                          = 0
+5926  openat(AT_FDCWD, "/lib/aarch64-linux-gnu/libm.so.6", O_RDONLY|O_CLOEXEC) = 3
+5926  read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+5926  fstat(3, {st_mode=S_IFREG|0644, st_size=591800, ...}) = 0
+5926  mmap(NULL, 720920, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_DENYWRITE, -1, 0) = 0xff57a645f000
+5926  mmap(0xff57a6460000, 655384, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0) = 0xff57a6460000
+5926  munmap(0xff57a645f000, 4096)      = 0
+5926  munmap(0xff57a6501000, 57368)     = 0
+5926  mprotect(0xff57a64e5000, 106496, PROT_NONE) = 0
+5926  mmap(0xff57a64ff000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x8f000) = 0xff57a64ff000
+5926  close(3)                          = 0
+5926  mprotect(0xff57a64ff000, 4096, PROT_READ) = 0
+5926  mprotect(0xff57a652f000, 4096, PROT_READ) = 0
+5926  munmap(0xff57a6732000, 56447)     = 0
+5926  read(0, "2 45 20\n", 1024)        = 8
+5926  write(1, "5\n", 2)                = 2
+5926  read(0, "", 1024)                 = 0
+5926  munmap(0xff57a6510000, 131120)    = 0
+5926  munmap(0xff57a6460000, 655384)    = 0
+5926  exit_group(0)                     = ?
+5926  +++ exited with 0 +++
